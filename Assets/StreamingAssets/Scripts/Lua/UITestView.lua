@@ -27,5 +27,3 @@ end
 function UILoadingView:OnDestroy()
 
 end
-
-CS.UnityEngine.Debug.LogError("UILoadingView")

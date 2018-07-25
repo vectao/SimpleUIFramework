@@ -91,5 +91,3 @@ function class(classname, super)
 
     return cls
 end
-
-CS.UnityEngine.Debug.LogError("class")
