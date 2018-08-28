@@ -123,7 +123,7 @@ function UITestController:BtnEquipBackClick()
 end
 
 function UITestController:BtnCloseClick()
-    UIManager:CloseWindow(self.view.name);
+    CS.Com.VT.UIManager.Instance:CloseWindow();
 end
 
 function UITestController:BtnRodClick()
