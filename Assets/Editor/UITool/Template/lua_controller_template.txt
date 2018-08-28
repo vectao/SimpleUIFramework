@@ -1,0 +1,53 @@
+﻿--=======================================================
+--  Author: 
+--  Create Time: {0}
+--  Describe:
+--=========================================================
+
+
+#controllerClsName# = class("#controllerClsName#");
+
+function #controllerClsName#:ctor(view, arr)
+    self.view = view;
+    self:RegistEvent();
+end
+
+function #controllerClsName#:RegistEvent()
+{1}
+end
+
+function #controllerClsName#:UnRegistEvent()
+
+end
+
+function #controllerClsName#:Awake()
+	CS.UnityEngine.Debug.LogError("Awake")
+end
+
+function #controllerClsName#:Start()
+	CS.UnityEngine.Debug.LogError("Start")
+end
+
+function #controllerClsName#:OnEnable()
+	CS.UnityEngine.Debug.LogError("OnEnable")
+end
+
+function #controllerClsName#:OnDisable()
+	CS.UnityEngine.Debug.LogError("OnDisable")
+end
+
+function #controllerClsName#:PreDestroy()
+	CS.UnityEngine.Debug.LogError("PreDestroy")
+	self.isDestroy = true;
+	self:UnRegistEvent();
+end
+
+function #controllerClsName#:OnFocus(focus)
+	CS.UnityEngine.Debug.LogError("OnFocus")
+end
+
+function #controllerClsName#:OnDestroy()
+	CS.UnityEngine.Debug.LogError("OnDestroy")
+end
+
+{2}

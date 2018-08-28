@@ -3,19 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace com.vt
+namespace Com.VT
 {
     public class ObjectContainer : MonoBehaviour
     {
         [Serializable]
-        public class sinle_obj_item
+        public class single_obj_item
         {
             public string name;
             public Component component;
         }
 
         [SerializeField]
-        private List<sinle_obj_item> objects = new List<sinle_obj_item>();
+        private List<single_obj_item> objects = new List<single_obj_item>();
 
         private Dictionary<string, Component> objDict = null;
 
@@ -41,7 +41,7 @@ namespace com.vt
             objDict = null;
         }
 
-        public List<sinle_obj_item> GetObjectItems()
+        public List<single_obj_item> GetObjectItems()
         {
             return objects;
         }

@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace com.vt
+namespace Com.VT
 {
     public static class ExtensionUtil
     {

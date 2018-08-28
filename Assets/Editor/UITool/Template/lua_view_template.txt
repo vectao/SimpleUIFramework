@@ -1,0 +1,53 @@
+--=======================================================
+--  该文件为自动生成，请勿手动修改;
+--  LastUpdate Time: {0}
+--=========================================================
+
+
+#viewClsName# = class("#viewClsName#");
+
+function #viewClsName#:ctor(go, ...)
+    self.name = "{1}";
+    self.gameObject = go;
+	self.objectContainer = go:GetComponent("ObjectContainer");
+
+{2}
+
+    self.controller = #controllerClsName#.New(self, ...);
+end
+
+function #viewClsName#:Awake()
+    self.controller:Awake();
+end
+
+function #viewClsName#:Start()
+    self.controller:Start();
+end
+
+function #viewClsName#:OnEnable()
+    self.controller:OnEnable();
+end
+
+function #viewClsName#:OnDisable()
+    self.controller:OnDisable();
+end
+
+function #viewClsName#:PreDestroy()
+    self.controller:PreDestroy();
+end
+
+function #viewClsName#:OnFocus(focus)
+    self.controller:OnFocus(focus);
+end
+
+function #viewClsName#:OnDestroy()
+    self.controller:OnDestroy();
+    self.name = nil;
+    self.gameObject = nil;
+    self.objectContainer = nil;
+    self.controller = nil;
+end
+
+function #viewClsName#:GetController()
+    return self.controller;
+end

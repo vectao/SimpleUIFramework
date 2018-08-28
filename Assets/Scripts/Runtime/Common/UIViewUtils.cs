@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace com.vt
+namespace Com.VT
 {
     public class UIViewUtils
     {

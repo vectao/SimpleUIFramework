@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using XLua;
 
-namespace com.vt
+namespace Com.VT
 {
     public class GameMain : MonoBehaviour
     {
@@ -26,7 +26,7 @@ namespace com.vt
         internal const float GCInterval = 1;//1 second 
 
         private Action luaStart;
-        private Action luaUpdate;
+        private Action<float> luaUpdate;
         private Action luaOnDestroy;
 
         private LuaTable scriptEnv;
@@ -81,7 +81,7 @@ namespace com.vt
 
             scriptEnv.Set("self", this);
 
-            luaEnv.DoString("require 'Scripts/Lua/LuaMain'", "LuaBehaviour", scriptEnv);
+            luaEnv.DoString("require 'Lua/LuaMain'", "LuaBehaviour", scriptEnv);
 
             Action luaAwake = scriptEnv.Get<Action>("awake");
             scriptEnv.Get("start", out luaStart);
@@ -106,7 +106,7 @@ namespace com.vt
         {
             if (luaUpdate != null)
             {
-                luaUpdate();
+                luaUpdate(Time.deltaTime);
             }
             if (Time.time - LuaBehaviour.lastGCTime > GCInterval)
             {
